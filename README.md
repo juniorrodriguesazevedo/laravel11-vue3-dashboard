@@ -1,1 +1,5 @@
-# laravel11-vue3-dashboard
+## Em desenvolvimento
+
+Front-end: npm run serve
+
+Back-end: php artisan server
