@@ -7,7 +7,7 @@ const storeDrawer = useDrawerStore();
 <template>
   <v-app-bar>
     <v-btn icon>
-      <v-icon @click="storeDrawer.openDrawer">mdi-menu</v-icon>
+      <v-icon @click="storeDrawer.openDrawer">mdi-menu </v-icon>
     </v-btn>
 
     <v-spacer></v-spacer>

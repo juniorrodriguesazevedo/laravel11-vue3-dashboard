@@ -1,7 +1,7 @@
 <template>
   <v-navigation-drawer location="left" permanent>
     <template v-slot:prepend>
-      <h3>Site</h3>
+      <h3 class="text-center py-5">Dashboard</h3>
     </template>
 
     <v-divider></v-divider>
@@ -11,6 +11,7 @@
         prepend-icon="mdi-home-city"
         title="Home"
         value="home"
+        :to="{ name: 'home' }"
       ></v-list-item>
       <v-divider></v-divider>
       <v-list-item
@@ -19,11 +20,11 @@
         value="account"
       ></v-list-item>
       <v-divider></v-divider>
-
       <v-list-item
         prepend-icon="mdi-account-group-outline"
-        title="Users"
+        title="Usuários"
         value="users"
+        :to="{ name: 'user' }"
       ></v-list-item>
     </v-list>
   </v-navigation-drawer>
