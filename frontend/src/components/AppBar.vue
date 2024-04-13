@@ -6,22 +6,29 @@ const storeDrawer = useDrawerStore();
 
 <template>
   <v-app-bar>
-    <v-btn icon>
-      <v-icon @click="storeDrawer.openDrawer">mdi-menu </v-icon>
-    </v-btn>
+    <v-app-bar-nav-icon @click="storeDrawer.openDrawer"></v-app-bar-nav-icon>
 
     <v-spacer></v-spacer>
 
-    <v-btn icon>
-      <v-icon>mdi-magnify</v-icon>
-    </v-btn>
+    <v-menu transition="slide-y-transition">
+      <template v-slot:activator="{ props }">
+        <v-avatar v-bind="props">
+          <v-img
+            alt="John"
+            src="https://cdn-icons-png.flaticon.com/512/147/147142.png"
+          ></v-img>
+        </v-avatar>
 
-    <v-btn icon>
-      <v-icon>mdi-heart</v-icon>
-    </v-btn>
+        <v-icon v-bind="props" icon="mdi mdi-menu-down" size="x-large"></v-icon>
+      </template>
 
-    <v-btn icon>
-      <v-icon>mdi-dots-vertical</v-icon>
-    </v-btn>
+      <v-card min-width="180px">
+        <v-list :lines="false" density="compact" nav>
+          <v-list-item prepend-icon="mdi-account-outline">
+            <v-list-item-title>Meu perfil</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-card>
+    </v-menu>
   </v-app-bar>
 </template>

@@ -18,5 +18,7 @@ class UserSeeder extends Seeder
             'email' => 'email@email.com',
             'password' => '12345678',
         ])->assignRole(RoleEnum::ADMIN);
+
+        User::factory()->count(500)->create();
     }
 }

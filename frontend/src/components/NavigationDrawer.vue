@@ -1,25 +1,25 @@
 <template>
   <v-navigation-drawer location="left" permanent>
     <template v-slot:prepend>
-      <h3 class="text-center py-5">Dashboard</h3>
+      <v-list-subheader class="d-flex align-center justify-center">
+        <h2 class="py-5 px-5">Dashboard</h2>
+      </v-list-subheader>
     </template>
 
     <v-divider></v-divider>
 
-    <v-list density="compact" nav>
+    <v-list density="compact" nav color="blue">
       <v-list-item
         prepend-icon="mdi-home-city"
         title="Home"
         value="home"
         :to="{ name: 'home' }"
       ></v-list-item>
-      <v-divider></v-divider>
       <v-list-item
         prepend-icon="mdi-account"
         title="My Account"
         value="account"
       ></v-list-item>
-      <v-divider></v-divider>
       <v-list-item
         prepend-icon="mdi-account-group-outline"
         title="Usuários"

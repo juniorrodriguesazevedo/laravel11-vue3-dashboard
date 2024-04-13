@@ -1,21 +1,16 @@
 <script setup>
-import { useDrawerStore } from "./stores/drawer.js";
-
-const storeDrawer = useDrawerStore();
+import Header from "./components/layouts/Header.vue";
+import Footer from "./components/layouts/Footer.vue";
 </script>
 
 <template>
   <v-layout class="rounded rounded-md">
-    <NavigationDrawer v-if="storeDrawer.drawer" />
-
-    <AppBar />
-
     <v-main>
-      <div style="padding: 20px">
+      <Header />
+      <div class="px-16 py-10">
         <router-view></router-view>
       </div>
+      <Footer />
     </v-main>
-
-    <v-footer app>Todos os direitos reservados</v-footer>
   </v-layout>
 </template>
