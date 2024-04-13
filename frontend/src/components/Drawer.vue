@@ -24,7 +24,7 @@
         prepend-icon="mdi-account-group-outline"
         title="Usuários"
         value="users"
-        :to="{ name: 'user' }"
+        :to="{ name: 'userList' }"
       ></v-list-item>
     </v-list>
   </v-navigation-drawer>

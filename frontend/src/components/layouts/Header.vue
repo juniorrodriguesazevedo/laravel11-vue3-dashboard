@@ -6,8 +6,7 @@ const storeDrawer = useDrawerStore();
 
 <template>
   <header>
-    <NavigationDrawer v-if="storeDrawer.drawer" />
-
+    <Drawer v-if="storeDrawer.drawer" />
     <AppBar />
   </header>
 </template>

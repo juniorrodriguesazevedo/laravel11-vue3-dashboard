@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, ref, watch } from "vue";
-import UserService from "../services/UserService";
+import UserService from "../../services/UserService";
 
 const users = ref([]);
 const currentPage = ref(1);
@@ -22,7 +22,13 @@ watch(currentPage, () => {
 </script>
 
 <template>
-  <div>
+  <v-container>
+    <PageHeader
+      name="Usuários"
+      textButton="Adicionar Novo"
+      :to="{ name: 'userCreate' }"
+    />
+
     <v-table density="compact" hover>
       <thead>
         <tr>
@@ -39,7 +45,31 @@ watch(currentPage, () => {
           <td>{{ user.name }}</td>
           <td>{{ user.email }}</td>
           <td>{{ user.cpf }}</td>
-          <td><Actions /></td>
+          <td>
+            <v-col cols="auto">
+              <v-btn
+                icon="mdi mdi-eye"
+                size="small"
+                variant="tonal"
+                color="blue"
+                class="mr-2"
+                :to="{ name: 'userDetail', params: { id: user.id } }"
+              ></v-btn>
+              <v-btn
+                icon="mdi mdi-pencil"
+                size="small"
+                variant="tonal"
+                color="yellow-darken-2"
+                class="mr-2"
+              ></v-btn>
+              <v-btn
+                icon="mdi mdi-delete"
+                size="small"
+                variant="tonal"
+                color="red"
+              ></v-btn>
+            </v-col>
+          </td>
         </tr>
       </tbody>
     </v-table>
@@ -53,5 +83,5 @@ watch(currentPage, () => {
         color="blue"
       ></v-pagination>
     </div>
-  </div>
+  </v-container>
 </template>
