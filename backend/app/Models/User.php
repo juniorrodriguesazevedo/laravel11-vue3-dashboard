@@ -23,6 +23,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'cpf'
     ];
 
     /**
@@ -51,7 +52,7 @@ class User extends Authenticatable
     protected function cpf(): Attribute
     {
         return Attribute::make(
-            get: fn (?string $value) => $value ?? 'Não informado',
+            get: fn (?string $value) => $value ? formatCpf($value) : 'Não informado',
         );
     }
 }

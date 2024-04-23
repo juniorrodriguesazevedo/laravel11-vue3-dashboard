@@ -20,22 +20,10 @@ defineProps({
       <h2 class="text-xl font-semibold">{{ name }}</h2>
     </v-col>
     <v-col cols="6" class="text-right">
-      <v-btn
-        variant="tonal"
-        color="blue"
-        density="comfortable"
-        v-if="to"
-        :to="to"
-      >
+      <v-btn v-if="to" :to="to">
         {{ textButton }}
       </v-btn>
-      <v-btn
-        v-else
-        @click="router.go(-1)"
-        variant="tonal"
-        color="blue"
-        density="comfortable"
-      >
+      <v-btn v-else @click="router.go(-1)">
         {{ textButton }}
       </v-btn>
     </v-col>

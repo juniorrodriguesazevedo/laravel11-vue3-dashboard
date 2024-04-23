@@ -6,7 +6,7 @@ const storeDrawer = useDrawerStore();
 
 <template>
   <v-app-bar>
-    <v-app-bar-nav-icon @click="storeDrawer.openDrawer"></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon @click="storeDrawer.openDrawer" color></v-app-bar-nav-icon>
 
     <v-spacer></v-spacer>
 
