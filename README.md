@@ -1,5 +1,7 @@
 ## Laravel Vue Dashboard
 
+#### Ainda em desenvolvimento, estou estudando Vue, Vuetify, VueRouter e Pinia.
+
 ### Back-end:
 
 * Você precisará do PHP8.2 instalado em seu computador, [BAIXE AQUI](https://www.php.net/downloads). 
