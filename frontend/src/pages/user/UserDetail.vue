@@ -41,6 +41,11 @@ onMounted(() => {
         <p>CPF: {{ user.cpf }}</p>
       </v-col>
     </v-row>
+    <v-row>
+      <v-col cols="12">
+        <p>Criado em: {{ user.created_at }}</p>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 

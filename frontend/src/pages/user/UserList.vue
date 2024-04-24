@@ -77,6 +77,7 @@ watch(currentPage, () => {
                 variant="tonal"
                 color="yellow-darken-2"
                 class="mr-2"
+                :to="{ name: 'userEdit', params: { id: user.id } }"
               ></v-btn>
               <v-btn
                 @click="confirmDelete(user.id)"
@@ -91,7 +92,7 @@ watch(currentPage, () => {
       </tbody>
     </v-table>
 
-     <v-dialog v-model="dialog" max-width="400" persistent>
+    <v-dialog v-model="dialog" max-width="400" persistent>
       <v-card class="py-6 px-2">
         <v-img src="/imgs/exclamation.png" height="100"></v-img>
         <v-card-title class="text-center mb-6">
